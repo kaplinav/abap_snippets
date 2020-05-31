@@ -1,7 +1,7 @@
-TYPES:
-BEGIN OF t_events,
-  sign TYPE ddsign,
-  option TYPE ddoption,
-  low TYPE massn,
-  high TYPE massn,
-END OF t_events.
+types:
+begin of t_events,
+  sign type ddsign,
+  option type ddoption,
+  low type massn,
+  high type massn,
+end of t_events.
