@@ -1,11 +1,18 @@
-class template definition .
+class template definition . 
 public section.
 " interfaces
 interfaces if_fsbp_const_range .
+" types
+" constants
+" data definition
 " methods
 methods constructor .
 
 protected section.
+" types
+" constants
+" data definition
+" methods
 
 private section.
 " aliases
