@@ -1,2 +1,2 @@
-# abap_snippets
+# ABAP snippets
 ABAP Code Snippets
