@@ -25,7 +25,7 @@ aliases option_equal for if_fsbp_const_range~option_equal.
 " types
 " constants
 " data definition
-data m_instance type ref to app.
+class-data m_instance type ref to app.
 " methods
 
 endclass . " app
