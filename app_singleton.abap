@@ -6,7 +6,7 @@ interfaces if_fsbp_const_range .
 " constants
 " data definition
 " methods
-methods get_instance
+class-methods get_instance
   returning
     value(r) type ref to app.
 
