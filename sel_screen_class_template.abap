@@ -7,9 +7,9 @@ interfaces isel_screen.
 " constants
 " data definition
 " methods
-  class-methods class_constructor.
-  class-methods pai.
-  class-methods pbo.
+class-methods class_constructor.
+class-methods pai.
+class-methods pbo.
 
 private section.
 " interfaces
@@ -17,6 +17,7 @@ private section.
 " constants
 " data definition
 " methods
+class-methods process_screen.
 endclass. " sel_screen
 
 class sel_screen implementation.
@@ -28,4 +29,8 @@ endmethod. " pai.
 
 method pbo.
 endmethod. " pbo.
+
+" loop at screen
+method process_screen.
+endmethod. " process_screen
 endclass. " sel_screen
