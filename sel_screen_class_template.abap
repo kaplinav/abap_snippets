@@ -1,7 +1,7 @@
 class sel_screen definition.
 public section.
 " interfaces
-interfaces isel_screen.
+" interfaces isel_screen.
 " aliases
 " types
 " constants
