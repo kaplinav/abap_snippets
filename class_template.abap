@@ -2,6 +2,7 @@ class template definition .
 public section.
 " interfaces
 interfaces if_fsbp_const_range .
+" aliases
 " types
 " constants
 " data definition
