@@ -1,0 +1,45 @@
+method on_f4_month_select.
+
+select mnr, ltx
+from t247
+into table @data(value_tab)
+where spras = @sy-langu.
+
+if lines( value_tab ) = 0.
+  return.
+endif.
+
+data(f4_popup) = cl_reca_gui_f4_popup=>factory_grid(
+  id_key_field    = 'MNR'
+  it_f4value      = value_tab
+  if_multi        = abap_false
+  id_title        = 'Месяц' ).
+
+f4_popup->display(
+  importing
+    et_result    = value_tab
+    ef_cancelled = data(cancelled) ).
+
+if lines( value_tab ) = 0.
+  return.
+endif.
+
+assign value_tab[ 1 ] to field-symbol(<f>).
+if sy-subrc = 0.
+  data dynpread type dynpread.
+  dynpread-fieldname = 'P_MONTH'.
+  dynpread-fieldvalue = <f>-mnr.
+  data dynpfields type standard table of dynpread.
+  insert dynpread into table dynpfields.
+
+  call function 'DYNP_VALUES_UPDATE'
+    exporting
+      dyname = sy-cprog
+      dynumb = sy-dynnr
+    tables
+      dynpfields = dynpfields.
+
+endif.
+
+
+endmethod. " on_f4_month_select.
