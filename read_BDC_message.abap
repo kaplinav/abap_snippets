@@ -1,4 +1,16 @@
-" Reading the BDC Message Result
+""" Reading the BDC Message Result
+" https://belajarabap.wordpress.com/2011/09/13/reading-the-bdc-message-result/
+
+" Usually after running BDC in the program, a message will appear on the results of the transaction execution. 
+" The data thrown in the message table is just an ID, TYPE, NUMBER, etc. which is difficult to understand. 
+" This is different from BAPI Return which has sent its message in full which can be understood by the user.
+
+" To read the contents of the message throw from the BDC, you can actually use TCODE SE91, 
+" which is a transaction to read messages by inputting the message ID and NUMBER. but this is very, very inefficient. 
+" so it would be nice if you do some coding to read the message from the BDC throw in the program.
+
+" There are several ways to make the message that appears easily understood by the user, 
+" namely by using the FORMAT_MESSAGE function, or by selecting data to table T10o.
 
 "" Function FORMAT_MESSAGE.
 
