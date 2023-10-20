@@ -28,6 +28,13 @@ private section.
 class-methods process_screen.
 endclass. " sel_screen
 
+*--------------------------------------------------------------------*
+selection-screen begin of block b01 with frame.
+  parameters p_... type ... .
+selection-screen end of block b01.
+*--------------------------------------------------------------------*
+
+
 class sel_screen implementation.
 method class_constructor.
 endmethod. " class_constructor.
