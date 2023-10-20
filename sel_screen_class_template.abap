@@ -4,10 +4,18 @@ public section.
 " interfaces isel_screen.
 " aliases
 " types
+types:
+begin of user_input_t,
+end of user_input_t.
 " constants
 " data definition
 " methods
 class-methods class_constructor.
+
+class-methods get_user_input
+  returning
+    value(r) type user_input_t.
+
 class-methods pai.
 class-methods pbo.
 
@@ -23,6 +31,12 @@ endclass. " sel_screen
 class sel_screen implementation.
 method class_constructor.
 endmethod. " class_constructor.
+
+method get_user_input.
+
+r-... = ....
+
+endmethod. " get_user_input
 
 method pai.
 endmethod. " pai.
