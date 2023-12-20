@@ -1,31 +1,34 @@
 class sel_screen definition.
-public section.
-" interfaces
-" interfaces isel_screen.
-" aliases
-" types
-types:
-begin of user_input_t,
-end of user_input_t.
-" constants
-" data definition
-" methods
-class-methods class_constructor.
+  public section.
+    " interfaces
+    " interfaces isel_screen.
+    " aliases
+    " types
+    types:
+    begin of user_input_t,
+      ... type ...,
+    end of user_input_t.
+    " constants
+    " data definition
+    data ... type ... .
+    " methods
+    class-methods class_constructor.
 
-class-methods get_user_input
-  returning
-    value(r) type user_input_t.
+    class-methods get_user_input
+      returning
+        value(r) type user_input_t.
 
-class-methods pai.
-class-methods pbo.
+    class-methods pai.
+    class-methods pbo.
 
-private section.
-" interfaces
-" types
-" constants
-" data definition
-" methods
-class-methods process_screen.
+  private section.
+    " interfaces
+    " types
+    " constants
+    " data definition
+    " methods
+    class-methods process_screen.
+
 endclass. " sel_screen
 
 *--------------------------------------------------------------------*
