@@ -57,7 +57,7 @@ from pa0000
 into t
 where pernr = pernr
 and massn in fire_event_rng
-and stat in fire_stat2_rng.
+and stat2 in fire_stat2_rng.
 
 if sy-subrc = 0.
   r = abap_true.
