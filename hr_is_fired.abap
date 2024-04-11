@@ -1,7 +1,14 @@
 
+types:
+
+
+methods get_fire_massn_rng
+  returning
+    value(r) type cchry_stat2_range.
+
 methods get_fire_stat2_rng
   returning
-    value(r) type CCHRY_STAT2_RANGE.
+    value(r) type cchry_stat2_range.
 
 methods is_fired 
   importing
