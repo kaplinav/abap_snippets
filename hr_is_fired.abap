@@ -59,4 +59,8 @@ where pernr = pernr
 and massn in fire_event_rng
 and stat in fire_stat2_rng.
 
+if sy-subrc = 0.
+  r = abap_true.
+endif.
+
 endmethod. " is_fired
