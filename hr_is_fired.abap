@@ -47,11 +47,16 @@ method is_fired .
 
 data t type persno.
 
+data fire_event_rng type event_rng_t.
+fire_event_rng = get_fire_event_rng( ).
+data fire_stat2_rng type cchry_stat2_range.
+fire_stat2_rng = get_fire_stat2_rng( ).
+
 select single pernr
 from pa0000
 into t
 where pernr = pernr
-and massn
-and stat .
+and massn in fire_event_rng
+and stat in fire_stat2_rng.
 
 endmethod. " is_fired
