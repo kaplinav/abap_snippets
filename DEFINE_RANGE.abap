@@ -8,7 +8,7 @@ end of rng_stru_t.
 
 types rng_t type standard table of rng_stru_t.
 
-rng = vakue #( 
+rng = value #( 
   for struc in itab( 
     sign = 'I'
     option = 'EQ'
